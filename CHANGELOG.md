@@ -16,7 +16,7 @@
 
 - SQL Files - no more Database stuff
 
-## v0.1.0-alpha *Initial Commit*
+## v0.1.0-alpha - Initial Commit
 
 ### Added
 
