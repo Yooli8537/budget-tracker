@@ -1,0 +1,40 @@
+body {
+  font-family: "Exo 2", sans-serif;
+  font-size: 16px;
+  color: #e4e4e4;
+  background-color: #212121;
+  margin: 10px 25px 10px 25px;
+}
+
+div {
+  margin: 0px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin: 3px 0px 8px 0px;
+}
+
+h2 {
+  font-size: 2em;
+  margin: 2px 0px 6px 0px;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin: 1px 0px 4px 0px;
+}
+
+p {
+  font-size: 1em;
+  margin: 0px 0px 2px 0px;
+}
+
+.box {
+  display: flex;
+}
+
+.logo {
+  color: #86aede;
+  margin-right: 7px;
+}
