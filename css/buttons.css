@@ -1,0 +1,18 @@
+.button {
+  border-radius: 5px;
+  border: 2px #000000 solid;
+}
+
+/* Heights */
+.fiveH {
+    height: 5%;
+}
+
+.tenH {
+    height: 10%;
+}
+
+/* Widths */
+.seventyW {
+  width: 70%;
+}
