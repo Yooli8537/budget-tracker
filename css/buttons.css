@@ -13,6 +13,12 @@
 }
 
 /* Widths */
+.autoW {
+  width: auto;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
 .seventyW {
   width: 70%;
 }

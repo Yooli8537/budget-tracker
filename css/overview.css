@@ -1,0 +1,8 @@
+/* CSS for the general Overview file. */
+.titleDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333333;
+  padding: 1%;
+}
