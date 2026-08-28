@@ -1,2 +1,2 @@
-Dark background: 212121
-Background: 333333
+Dark background: #212121
+Background: #333333
