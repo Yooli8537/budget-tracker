@@ -38,3 +38,7 @@ p {
   color: #86aede;
   margin-right: 7px;
 }
+
+#titleBox {
+  height: 5vh;
+}
