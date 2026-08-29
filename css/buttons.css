@@ -12,6 +12,14 @@
   height: 10%;
 }
 
+.fiftyH {
+  height: 50%;
+}
+
+.eightyH {
+  height: 80%;
+}
+
 /* Widths */
 .autoW {
   width: auto;
