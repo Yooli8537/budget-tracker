@@ -12,19 +12,23 @@
     <link rel="stylesheet" href="../css/buttons.css">
     <link rel="stylesheet" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/overview.css">
+    <script src="../js/overview.js" defer></script>
 </head>
 
 <body>
-    <div id="titleBox" class="box">
+    <header id="titleBox" class="box">
         <h1 class="logo">[ Y ]</h1>
         <h1>Budget Tracker</h1>
-    </div>
+    </header>
     <hr>
     <div id="categoriesDiv">
         <div class="titleDiv">
             <h2>Categories</h2>
-            <button class="button autoW fiftyH light-blue medium">+ Category</button>
+            <button type="submit" class="button autoW fiftyH light-blue medium" id="categoryAddButton">
+                + Category
+            </button>
         </div>
+        <div class="contentDiv"></div>
     </div>
 </body>
 
