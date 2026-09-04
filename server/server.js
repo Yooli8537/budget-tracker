@@ -7,27 +7,10 @@ const port = 8561; // If you change the port, make sure to also change it in the
 
 let dataFolderAdjusted = false;
 
-const dataFolder = path.join(__dirname, "public/data");
-
-const expensesFile = path.join(dataFolder, "expenses.json");
-const incomesFile = path.join(dataFolder, "incomes.json");
-const savingsFile = path.join(dataFolder, "savings.json");
-const categoriesFile = path.join(dataFolder, "categories.json");
-
-const dataFiles = [expensesFile, incomesFile, savingsFile, categoriesFile];
-
-if (dataFolderAdjusted) {
-  console.warn(
-    "Adjustments to the Data folder were made. Visit the Server logs for more info.",
-  );
-  console.log(
-    "This is standard if you've freshly cloned the Repository, as the data folder and its contents are ignored by git.",
-  );
-} else {
-  console.log(
-    "No adjustments made to the Data folder. Running Backend normally.",
-  );
-}
+const dataFolder = path.join(__dirname, "data");
+const logsFolder = path.join(__dirname, "logs");
+const privateFolder = path.join(dataFolder, "private");
+const publicFolder = path.join(dataFolder, "public");
 
 app.listen(port, () => {
   console.log(`Backend listening on port ${port}`);
