@@ -10,7 +10,7 @@ let dataFolderAdjusted = false;
 const dataFolder = path.join(__dirname, "data");
 const logsFolder = path.join(__dirname, "logs");
 const privateFolder = path.join(dataFolder, "private");
-const publicFolder = path.join(dataFolder, "public");
+const usersFolder = path.join(dataFolder, "users");
 
 app.listen(port, () => {
   console.log(`Backend listening on port ${port}`);
