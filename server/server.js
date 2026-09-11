@@ -10,10 +10,10 @@ const PORT = 8561; // If you change the port, make sure to also change it in the
 
 let dataFoldersAdjusted = false;
 const dataFolders = [
-  GLOBAL.FOLDERS.DATA,
-  GLOBAL.FOLDERS.LOGS,
-  GLOBAL.FOLDERS.PRIVATE,
-  GLOBAL.FOLDERS.USERS,
+  GLOBAL.PATHS.FOLDERS.DATA,
+  GLOBAL.PATHS.FOLDERS.LOGS,
+  GLOBAL.PATHS.FOLDERS.PRIVATE,
+  GLOBAL.PATHS.FOLDERS.USERS,
 ];
 
 logger.info("Checking for missing data folders...");
@@ -43,6 +43,12 @@ for (let i = 0; i < dataFolders.length; i++) {
 if (!dataFoldersAdjusted) {
   logger.info("No missing data folders found.");
 }
+
+const USERS_ROUTE = require(GLOBAL.PATHS.ROUTES.USERS);
+
+app.use(express.json());
+app.use(express.static(GLOBAL.PATHS.FOLDERS.ROOT));
+app.use(USERS_ROUTE);
 
 app.listen(PORT, () => {
   logger.info({ Port: PORT }, "Budget Tracker backend running.");

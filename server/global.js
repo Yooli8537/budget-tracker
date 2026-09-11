@@ -13,17 +13,19 @@ const USERS_FOLDER = path.join(DATA_FOLDER, "users");
 const USERS_ROUTE = path.join(ROUTES_FOLDER, "users.routes.js");
 
 const GLOBAL = {
-  FOLDERS: {
-    ROOT: ROOT_FOLDER,
-    SERVER: SERVER_FOLDER,
-    ROUTES: ROUTES_FOLDER,
-    DATA: DATA_FOLDER,
-    LOGS: LOGS_FOLDER,
-    PRIVATE: PRIVATE_FOLDER,
-    USERS: USERS_FOLDER,
-  },
-  ROUTES: {
-    USERS: USERS_ROUTE,
+  PATHS: {
+    FOLDERS: {
+      ROOT: ROOT_FOLDER,
+      SERVER: SERVER_FOLDER,
+      ROUTES: ROUTES_FOLDER,
+      DATA: DATA_FOLDER,
+      LOGS: LOGS_FOLDER,
+      PRIVATE: PRIVATE_FOLDER,
+      USERS: USERS_FOLDER,
+    },
+    ROUTES: {
+      USERS: USERS_ROUTE,
+    },
   },
 };
 

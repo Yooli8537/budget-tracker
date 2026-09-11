@@ -6,7 +6,11 @@ const logger = require("../logger");
 const error = require("../error");
 const GLOBAL = require("../global");
 
-crypto.scrypt("999", "999", 117, (err, derivedKey) => {
+function createSalt(length) {
+  return crypto.randomBytes(length).toString("hex");
+}
+
+crypto.scrypt("999", createSalt(17), 117, (err, derivedKey) => {
   if (err) {
     error("Create hashword", "Failed to create hasword.", {}, err);
   }
