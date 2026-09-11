@@ -11,7 +11,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently \"vite\" \"node server/server.js\""
+    "dev": "concurrently \"node server/server.js\" \"vite --port 8560\""
   },
   "dependencies": {
     "better-sqlite3": "^13.0.3",
