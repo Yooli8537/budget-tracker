@@ -6,9 +6,9 @@ const error = require("./error");
 const GLOBAL = require("./global");
 
 const app = express();
-const port = 8561; // If you change the port, make sure to also change it in the vite.config.js
+const PORT = 8561; // If you change the port, make sure to also change it in the vite.config.js
 
-let dataFolderAdjusted = false;
+let dataFoldersAdjusted = false;
 
 const dataFolders = [
   GLOBAL.DATA_FOLDER,
@@ -17,15 +17,19 @@ const dataFolders = [
   GLOBAL.USERS_FOLDER,
 ];
 
+logger.info("Checking for missing data folders...");
 for (let i = 0; i < dataFolders.length; i++) {
   if (!fs.existsSync(dataFolders[i])) {
     try {
       fs.mkdirSync(dataFolders[i]);
-      logger.info(
-        { "Data folder": dataFolders[i] },
+      logger.warn(
+        {
+          "Data folder": dataFolders[i],
+          Note: "This folder is created automatically after first installing the budget tracker.",
+        },
         "Creating missing data folder.",
       );
-      dataFolderAdjusted = true;
+      dataFoldersAdjusted = true;
     } catch (err) {
       error(
         "Create missing data folders",
@@ -37,6 +41,10 @@ for (let i = 0; i < dataFolders.length; i++) {
   }
 }
 
-app.listen(port, () => {
-  console.log(`Backend listening on port ${port}`);
+if (!dataFoldersAdjusted) {
+  logger.info("No missing data folders found.");
+}
+
+app.listen(PORT, () => {
+  logger.info({ Port: PORT }, "Budget Tracker backend running.");
 });
