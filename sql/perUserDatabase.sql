@@ -1,11 +1,11 @@
 -- Tables which are saved per user within their directory.
 CREATE TABLE IF NOT EXISTS states (
-    stateID INT PRIMARY KEY AUTOINCREMENT,
+    stateID INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS categories (
-    categoryID INT PRIMARY KEY AUTOINCREMENT,
+    categoryID INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL UNIQUE,
     type TEXT NOT NULL, -- income, expense, saving
     colorHex TEXT NOT NULL DEFAULT "#bbbbbb",
@@ -13,19 +13,19 @@ CREATE TABLE IF NOT EXISTS categories (
 );
 
 CREATE TABLE IF NOT EXISTS goals (
-    goalID INT PRIMARY KEY AUTOINCREMENT,
-    categoryIDFK INT NOT NULL,
-    month INT NOT NULL,
-    year INT NOT NULL,
-    limitAmount INT,
-    goalAmount INT,
+    goalID INTEGER PRIMARY KEY AUTOINCREMENT,
+    categoryIDFK INTEGER NOT NULL,
+    month INTEGER NOT NULL,
+    year INTEGER NOT NULL,
+    limitAmount INTEGER,
+    goalAmount INTEGER,
     FOREIGN KEY (categoryIDFK) REFERENCES categories(categoryID)
 );
 
 CREATE TABLE IF NOT EXISTS transactions (
-    transactionID INT PRIMARY KEY AUTOINCREMENT,
-    stateIDFK INT NOT NULL,
-    categoryIDFK INT NOT NULL,
+    transactionID INTEGER PRIMARY KEY AUTOINCREMENT,
+    stateIDFK INTEGER NOT NULL,
+    categoryIDFK INTEGER NOT NULL,
     amount FLOAT NOT NULL,
     date DATE NOT NULL,
     description TEXT NOT NULL,
