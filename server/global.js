@@ -18,7 +18,7 @@ const USERS_DATABASE = path.join(PRIVATE_FOLDER, "users.db");
 // Files
 const SERVER_SETTINGS = path.join(PRIVATE_FOLDER, "server.json");
 const USERS_DB_SQL = path.join(SQL_FOLDER, "users.sql");
-const USER_DATA_SQL = path.join(SQL_FOLDER, "perUserDatabase.sql");
+const USER_DATA_DB_SQL = path.join(SQL_FOLDER, "perUserDatabase.sql");
 
 const GLOBAL = {
   PATHS: {
@@ -40,7 +40,7 @@ const GLOBAL = {
     FILES: {
       SERVER_SETTINGS: SERVER_SETTINGS,
       USERS_DB_SQL: USERS_DB_SQL,
-      USER_DATA_SQL: USER_DATA_SQL,
+      USER_DATA_DB_SQL: USER_DATA_DB_SQL,
     },
   },
 };
