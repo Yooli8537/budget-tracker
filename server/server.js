@@ -9,7 +9,6 @@ const app = express();
 const PORT = 8561; // If you change the port, make sure to also change it in the vite.config.js
 
 let dataFoldersAdjusted = false;
-
 const dataFolders = [
   GLOBAL.DATA_FOLDER,
   GLOBAL.LOGS_FOLDER,
