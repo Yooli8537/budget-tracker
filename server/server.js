@@ -10,10 +10,10 @@ const PORT = 8561; // If you change the port, make sure to also change it in the
 
 let dataFoldersAdjusted = false;
 const dataFolders = [
-  GLOBAL.DATA_FOLDER,
-  GLOBAL.LOGS_FOLDER,
-  GLOBAL.PRIVATE_FOLDER,
-  GLOBAL.USERS_FOLDER,
+  GLOBAL.FOLDERS.DATA,
+  GLOBAL.FOLDERS.LOGS,
+  GLOBAL.FOLDERS.PRIVATE,
+  GLOBAL.FOLDERS.USERS,
 ];
 
 logger.info("Checking for missing data folders...");
