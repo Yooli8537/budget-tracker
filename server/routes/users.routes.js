@@ -14,7 +14,6 @@ crypto.scrypt("999", createSalt(17), 117, (err, derivedKey) => {
   if (err) {
     error("Create hashword", "Failed to create hasword.", {}, err);
   }
-  logger.info(derivedKey.toString("hex"));
 });
 
 module.exports = router;
