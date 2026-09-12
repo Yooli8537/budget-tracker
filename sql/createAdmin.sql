@@ -1,0 +1,4 @@
+-- Creates the admin user on first startup.
+
+INSERT INTO users (isAdmin, username, salt, hashword)
+VALUES (true, "admin", 14b0598eefef93a0badd2f5bb6e8d6e39c, 1c76de0ec7192fd11a6b648e4e51047d84c55b8c7fe5eaddcb6b2538c6f7d13e3c685edba918d8e8669315a735a3cd1d0f4d135902255a414bdc995c85dae847908aa30d4a5ea5b86b0489716600077389249f0a3fe21664c647dc602bd11fa6bd276a1908670607833f714d3c926b9618bbd5c4e0);
